@@ -47,7 +47,7 @@ def prime_digit_sum():
     N = 0
     D = 0
 
-    while D < 1000:
+    while N < 3015:
         ds = digit_sum(N)
         if ds in primes_map:
             ds_prime_list.append(N)
@@ -74,12 +74,13 @@ def diff_calc(arr):
 
 
 # Plot the results of
-def plot_diff_calc_results(arr):
-    diff_result = diff_calc(arr)
-    x_values = list(range(1, len(diff_result) + 1))
+def plot_results(arr):
+    result = prime_digit_sum()
+    # result = diff_calc(arr)
+    x_values = list(range(1, len(result) + 1))
 
-    plt.figure(figsize=(10, 6))
-    plt.plot(x_values, diff_result, marker="o", linestyle="-", color="b")
+    plt.figure(figsize=(15, 10))
+    plt.plot(x_values, result, marker=".", linestyle="-", color="b")
     plt.xlabel("Index")
     plt.ylabel("Difference")
     plt.title("Difference Calculation Results")
@@ -89,4 +90,4 @@ def plot_diff_calc_results(arr):
 
 if __name__ == "__main__":
     arr = prime_digit_sum()
-    plot_diff_calc_results(arr)
+    plot_results(arr)
