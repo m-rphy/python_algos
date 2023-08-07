@@ -1,6 +1,7 @@
 # N-queens
 
-# we are given n queens and n differnet queens, such that no two queens never attack each other
+# we are given n queens and n differnet queens, 
+#  such that no two queens never attack each other
 
 #  example
 # [[0,1,0,0],
